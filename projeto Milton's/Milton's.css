@@ -32,7 +32,7 @@ body {
 }
 
 /* muda a cor das li na navbar! */
-.headerLeft a{
+.headerLeft a {
     text-decoration: none;
     margin-top: 2%;
     border: none;
@@ -44,7 +44,7 @@ body {
 
 
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     margin-top: 2%;
     border: none;
@@ -92,6 +92,27 @@ body {
     padding: 10px;
 }
 
+/* corpo do site */
+.corpo{
+    background-color: #FFFFFF;
+    width: 70%;
+    margin-left: 15%;
+}
+.news {
+    width: 60%;
+    height: 40%;
+    font-size: large;
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 25px;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.news img {
+    width: 400px;
+}
 
 /* footer */
 .footer {
@@ -142,7 +163,7 @@ body {
     color: #FFFFFF;
 }
 
-.footerLi a{
+.footerLi a {
     text-decoration: none;
     margin-top: 2%;
     border: none;
@@ -153,7 +174,8 @@ body {
     font-size: 16px;
 }
 
-.footer h1, span{
+.footer h1,
+span {
     margin-left: 20px;
     margin-right: 20px;
 }
