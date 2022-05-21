@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="telaCadastro.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Milton's</h1>
+
+            <ul class="navbar">
+                <li><a href="telaLogin.html">login</a></li>
+                <li><a href="#">cadastro</a></li>
+                <li><a href="Milton's.html">Inicio</a></li>
+            </ul>
+
+        </div>
+
+        <div class="corpo">
+
+            <div class="inputs">
+
+                <label for="email_input" class="la1">Email:</label>
+                <input id="email_input" class="in1"> <br>
+
+                <label for="numero_input" class="la2">Numero de contato:</label>
+                <input id="numero_input" class="in2"> <br>
+
+                <label for="senha_input" class="la3">Sua senha:</label>
+                <input id="senha_input" class="in3"> <br>
+
+                <label for="Csenha_input" class="la4">Confirme sua senha:</label>
+                <input id="Csenha_input" class="in4"> <br>
+
+                <button onclick="validaçoes_button()" class="butao">Cadastrar-se</button>
+
+                <div id="mvalidaçoes" style="color: white;"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    function validaçoes_button() {
+        var email = email_input.value
+        var numero = numero_input.value
+        var senha = senha_input.value
+        var csenha = Csenha_input.value
+
+        if (email.length == 0) {
+            mvalidaçoes.innerHTML = `Email invalido, campo vazio`
+        }
+        else {
+            if (numero.length == 0) {
+                mvalidaçoes.innerHTML = `Numero invalido, campo vazio`
+            }
+
+            else if (senha.length == 0) {
+                mvalidaçoes.innerHTML = `Senha invalida, campo vazio`
+            }
+
+            else if (numero.length < 8) {
+                    mvalidaçoes.innerHTML = `numero inválido, tente colocar um numero maior que 8 digitos`
+                }
+
+            else if (csenha.length == 0) {
+                mvalidaçoes.innerHTML = `confirmação de senha invalida, campo vazio`
+            }
+
+            else if(senha!=csenha){
+                mvalidaçoes.innerHTML = `Senha invalida, as senhas inseridas não são iguais.`
+            }
+            else {
+                if (email.indexOf('@') < 0 ||
+                    email.indexOf('.com') < 0 ) {
+                    mvalidaçoes.innerHTML = `email invalido, confira se há @ e .com no seu email <br>`
+                    }
+
+                    else{
+                        mvalidaçoes.innerHTML = `Cadastro efetuado`
+                    }
+
+            }
+        }
+
+    }
+
+
+</script>
