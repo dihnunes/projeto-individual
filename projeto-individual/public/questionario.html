@@ -27,11 +27,11 @@
             <li class="leftLi1"><a href="cadastro.html">Não possui conta?</a></li>
             <li class="leftLi2"><a href="login.html">Entrar</a></li>
 
-            <li class="li1"><a href="index.html" class="agora">Noticias recentes</a></li>
+            <li class="li1"><a href="index.html">Noticias recentes</a></li>
             <li class="li2"><a href="#">Eleições 2022</a></li>
             <li class="li3"><a href="#">Esportes</a></li>
-            <li class="li4"><a href="#">Guerra na Ucrania</a></li>
-            <li class="li5"><a href="#" class="agora">Questionario</a></li>
+            <li class="li4"><a href="questionario.html" class="agora">Questionario</a></li>
+            <li class="li5"><a href="sobrenos.html">Sobre Nós</a></li>
         </ul>
 
             </div>
@@ -131,7 +131,7 @@
 
 </html>
 <script>
-    function cadastrar_questionario() {
+function cadastrar_questionario() {
         aguardar();
 
         //Recupere o valor da nova input pelo nome do id
@@ -154,7 +154,7 @@
         }
 
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        fetch("/usuarios/cadastrar_questionario", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -192,8 +192,9 @@
         });
 
         return false;
-    }
+}
 
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
+</script>
