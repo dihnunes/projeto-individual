@@ -116,7 +116,7 @@ function cadastrar_questionario(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(resposta1, resposta2, resposta3, resposta4, resposta5)
+        usuarioModel.cadastrar_questionario(resposta1, resposta2, resposta3, resposta4, resposta5)
             .then(
                 function (resultado) {
                     res.json(resultado);
